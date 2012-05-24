@@ -10,7 +10,7 @@ module HandlebarsAssets
   autoload(:Handlebars, 'handlebars_assets/handlebars')
   autoload(:TiltHandlebars, 'handlebars_assets/tilt_handlebars')
 
-  if defined?(Rails) && defined?(::Rails::Engine)
+  if defined?(Rails) && defined?(::Rails::Engine) && Rails.version >= '3.1'
     require 'handlebars_assets/engine'
   else
     require 'sprockets'
